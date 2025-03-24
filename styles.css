@@ -695,6 +695,106 @@ footer {
     background: linear-gradient(90deg);
 }
 
+/* Instagram Feed Section */
+.instagram-feed {
+    background-color: var(--light-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.instagram-feed::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"%3E%3Cpath fill="%232563eb" fill-opacity="0.05" d="M0,160L48,170.7C96,181,192,203,288,202.7C384,203,480,181,576,165.3C672,149,768,139,864,154.7C960,171,1056,213,1152,218.7C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"%3E%3C/path%3E%3C/svg%3E');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+}
+
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.instagram-item {
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    aspect-ratio: 1/1;
+    position: relative;
+}
+
+.instagram-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.instagram-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.instagram-item:hover img {
+    transform: scale(1.05);
+}
+
+.instagram-placeholder {
+    background: linear-gradient(
+        45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%
+    );
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.instagram-placeholder i {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.instagram-cta {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.instagram-cta .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.instagram-cta .btn i {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .instagram-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Media Queries */
 @media (max-width: 1024px) {
     .hero-content h1 {
