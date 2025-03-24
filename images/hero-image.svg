@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <rect width="800" height="400" fill="#FFD700" rx="10" ry="10"/>
+  <text x="60%" y="30%" font-family="Arial" font-weight="bold" font-size="48" fill="#00008B">E AÍ, LOJISTA</text>
+  <text x="60%" y="45%" font-family="Arial" font-size="24" fill="#00008B">você já oferece argamassa</text>
+  <text x="60%" y="55%" font-family="Arial" font-size="24" fill="#00008B">de qualidade com o melhor</text>
+  <text x="60%" y="65%" font-family="Arial" font-size="24" fill="#00008B">preço do mercado em sua loja?</text>
+  <circle cx="520" cy="320" r="40" fill="white"/>
+  <text x="520" y="320" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10" fill="#00008B">WhatsApp</text>
+  <text x="520" y="335" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10" fill="#00008B">77 9 9974-2551</text>
+</svg>

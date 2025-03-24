@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+  <!-- Saco de Argamassa -->
+  <rect x="100" y="50" width="200" height="300" rx="20" ry="20" fill="#e6e6e6" stroke="#cccccc" stroke-width="2"/>
+  <!-- Parte vermelha do saco -->
+  <rect x="100" y="50" width="100" height="300" fill="#e63946" stroke="#cccccc" stroke-width="2"/>
+  <!-- Logo estilizado -->
+  <circle cx="150" cy="120" r="30" fill="none" stroke="white" stroke-width="3"/>
+  <path d="M130,120 Q150,90 170,120" fill="none" stroke="white" stroke-width="3"/>
+  <!-- Texto AC-I -->
+  <text x="150" y="200" font-family="Arial" font-size="40" font-weight="bold" fill="white" text-anchor="middle">AC-I</text>
+  <!-- Texto INTERNO -->
+  <rect x="120" y="220" width="60" height="15" fill="#e63946" stroke="white" stroke-width="1"/>
+  <text x="150" y="232" font-family="Arial" font-size="10" font-weight="bold" fill="white" text-anchor="middle">INTERNO</text>
+  <!-- Texto para assentamentos -->
+  <text x="150" y="250" font-family="Arial" font-size="6" fill="white" text-anchor="middle">PARA ASSENTAMENTOS DE</text>
+  <text x="150" y="260" font-family="Arial" font-size="6" fill="white" text-anchor="middle">AZULEJOS E PISOS CERÂMICOS</text>
+  <!-- Peso -->
+  <rect x="120" y="270" width="60" height="30" rx="15" ry="15" fill="white" stroke="#e63946" stroke-width="1"/>
+  <text x="150" y="290" font-family="Arial" font-size="20" font-weight="bold" fill="#e63946" text-anchor="middle">20Kg</text>
+  <!-- Texto ARGOESTE -->
+  <text x="300" y="150" font-family="Arial" font-size="30" font-weight="bold" fill="#e63946" text-anchor="middle" transform="rotate(-90,300,150)">ARGOESTE</text>
+  <!-- Texto SUPERMASSA -->
+  <text x="270" y="150" font-family="Arial" font-size="15" font-weight="bold" fill="#333366" text-anchor="middle" transform="rotate(-90,270,150)">SUPERMASSA</text>
+</svg>

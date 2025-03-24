@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400">
+  <rect width="300" height="400" fill="white" rx="10" ry="10"/>
+  <rect x="20" y="50" width="260" height="300" fill="#FF0000" rx="5" ry="5"/>
+  <text x="150" y="150" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-weight="bold" font-size="48" fill="white">ACI</text>
+  <text x="150" y="200" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="24" fill="white">INTERNO</text>
+  <text x="150" y="300" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-weight="bold" font-size="36" fill="white">20Kg</text>
+  <text x="150" y="350" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-weight="bold" font-size="24" fill="#0056b3">ARGOESTE</text>
+</svg>

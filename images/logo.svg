@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+  <rect width="200" height="60" fill="#0056b3" rx="5" ry="5"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="Arial" font-weight="bold" font-size="24">ARGOESTE</text>
+  <text x="50%" y="75%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="Arial" font-size="12">SUPERMASSA</text>
+</svg>
