@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
             e.preventDefault()
 
             // Replace with the actual phone number (with country code)
-            const phoneNumber = '5500000000000' // Example: 55 for Brazil + actual number
+            const phoneNumber = '5577999742551' // Número correto: 55 (Brasil) + 77 (DDD) + 999742551
 
             // Pre-programmed message
             const message =
@@ -54,6 +54,131 @@ document.addEventListener('DOMContentLoaded', function () {
             window.open(whatsappUrl, '_blank')
         })
     }
+
+    // Product Carousel
+    class ProductCarousel {
+        constructor() {
+            this.currentSlide = 0;
+            this.slides = document.querySelectorAll('.product-slide');
+            this.indicators = document.querySelectorAll('.indicator');
+            this.prevBtn = document.querySelector('.carousel-btn-prev');
+            this.nextBtn = document.querySelector('.carousel-btn-next');
+            this.autoplayInterval = null;
+            this.autoplayDelay = 5000;
+            this.isPlaying = true;
+            
+            this.init();
+        }
+        
+        init() {
+            if (this.slides.length === 0) return;
+            
+            // Event listeners for navigation buttons
+            this.prevBtn?.addEventListener('click', () => this.prevSlide());
+            this.nextBtn?.addEventListener('click', () => this.nextSlide());
+            
+            // Event listeners for indicators
+            this.indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => this.goToSlide(index));
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') this.prevSlide();
+                if (e.key === 'ArrowRight') this.nextSlide();
+            });
+            
+            // Touch/swipe support
+            this.addTouchSupport();
+            
+            // Auto-play functionality
+            this.startAutoplay();
+            
+            // Pause on hover
+            const carousel = document.querySelector('.product-carousel');
+            carousel?.addEventListener('mouseenter', () => this.pauseAutoplay());
+            carousel?.addEventListener('mouseleave', () => this.startAutoplay());
+        }
+        
+        goToSlide(index) {
+            // Remove active class from current slide and indicator
+            this.slides[this.currentSlide]?.classList.remove('active');
+            this.indicators[this.currentSlide]?.classList.remove('active');
+            
+            // Update current slide
+            this.currentSlide = index;
+            
+            // Add active class to new slide and indicator
+            this.slides[this.currentSlide]?.classList.add('active');
+            this.indicators[this.currentSlide]?.classList.add('active');
+            
+            // Update carousel track position
+            const track = document.querySelector('.carousel-track');
+            if (track) {
+                track.style.transform = `translateX(-${this.currentSlide * 100}%)`;
+            }
+        }
+        
+        nextSlide() {
+            const nextIndex = (this.currentSlide + 1) % this.slides.length;
+            this.goToSlide(nextIndex);
+        }
+        
+        prevSlide() {
+            const prevIndex = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+            this.goToSlide(prevIndex);
+        }
+        
+        startAutoplay() {
+            if (!this.isPlaying) return;
+            
+            this.autoplayInterval = setInterval(() => {
+                this.nextSlide();
+            }, this.autoplayDelay);
+        }
+        
+        pauseAutoplay() {
+            if (this.autoplayInterval) {
+                clearInterval(this.autoplayInterval);
+                this.autoplayInterval = null;
+            }
+        }
+        
+        addTouchSupport() {
+            const carousel = document.querySelector('.carousel-container');
+            if (!carousel) return;
+            
+            let startX = 0;
+            let endX = 0;
+            
+            carousel.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+            });
+            
+            carousel.addEventListener('touchend', (e) => {
+                endX = e.changedTouches[0].clientX;
+                this.handleSwipe();
+            });
+            
+            const handleSwipe = () => {
+                const threshold = 50;
+                const diff = startX - endX;
+                
+                if (Math.abs(diff) > threshold) {
+                    if (diff > 0) {
+                        this.nextSlide();
+                    } else {
+                        this.prevSlide();
+                    }
+                }
+            };
+            
+            this.handleSwipe = handleSwipe;
+        }
+    }
+
+    // Initialize carousel
+    new ProductCarousel();
 
     // Newsletter Form Submission
     const newsletterForm = document.getElementById('newsletter-form')
