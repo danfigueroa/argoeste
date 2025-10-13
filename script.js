@@ -1,5 +1,30 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle')
+    const navLinks = document.querySelector('.nav-links')
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', function () {
+            menuToggle.classList.toggle('active')
+            navLinks.classList.toggle('active')
+        })
+
+        // Close menu when clicking on a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active')
+                navLinks.classList.remove('active')
+            })
+        })
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+                menuToggle.classList.remove('active')
+                navLinks.classList.remove('active')
+            }
+        })
+    }
     const mobileMenuIcon = document.querySelector('.mobile-menu-icon')
     const nav = document.querySelector('nav')
 
@@ -203,13 +228,15 @@ document.addEventListener('DOMContentLoaded', function () {
     // Header Scroll Effect
     const header = document.querySelector('header')
 
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > 50) {
-            header.style.padding = '10px 0'
-            header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)'
-        } else {
-            header.style.padding = '15px 0'
-            header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)'
-        }
-    })
+    if (header) {
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 50) {
+                header.style.padding = '10px 0'
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)'
+            } else {
+                header.style.padding = '15px 0'
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)'
+            }
+        })
+    }
 })

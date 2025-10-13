@@ -31,40 +31,47 @@ graph TD
 
 ## 2. Descrição da Tecnologia
 
-- Frontend: HTML5 + CSS3 + JavaScript Vanilla
-- Estilização: CSS Grid + Flexbox + Custom Properties
-- Ícones: Font Awesome 6.4.0
-- Fontes: Google Fonts (Montserrat + Roboto)
-- Responsividade: Media Queries CSS
+* Frontend: HTML5 + CSS3 + JavaScript Vanilla
+
+* Estilização: CSS Grid + Flexbox + Custom Properties
+
+* Ícones: Font Awesome 6.4.0
+
+* Fontes: Google Fonts (Montserrat + Roboto)
+
+* Responsividade: Media Queries CSS
 
 ## 3. Definições de Rotas
 
-| Rota | Propósito |
-|------|-----------|
-| / | Página principal com todas as seções |
-| #inicio | Seção hero/início |
-| #sobre | Seção sobre a empresa |
-| #produtos | Seção de produtos |
-| #diferenciais | Seção de diferenciais |
-| #contato | Seção de contato |
-| #localizacao | Seção de localização |
-| #instagram | Seção do Instagram |
+| Rota          | Propósito                            |
+| ------------- | ------------------------------------ |
+| /             | Página principal com todas as seções |
+| #inicio       | Seção hero/início                    |
+| #sobre        | Seção sobre a empresa                |
+| #produtos     | Seção de produtos                    |
+| #diferenciais | Seção de diferenciais                |
+| #contato      | Seção de contato                     |
+| #localizacao  | Seção de localização                 |
+| #instagram    | Seção do Instagram                   |
 
 ## 4. Definições de API (Serviços Externos)
 
 ### 4.1 WhatsApp Web API
 
 **Endpoint de Contato WhatsApp**
+
 ```
 GET https://wa.me/5577999742551
 ```
 
 Parâmetros:
-| Nome do Parâmetro | Tipo | Obrigatório | Descrição |
-|-------------------|------|-------------|-----------|
-| text | string | false | Mensagem pré-programada |
+
+| Nome do Parâmetro | Tipo   | Obrigatório | Descrição               |
+| ----------------- | ------ | ----------- | ----------------------- |
+| text              | string | false       | Mensagem pré-programada |
 
 Exemplo de URL:
+
 ```
 https://wa.me/5577999742551?text=Olá!%20Vim%20pelo%20site%20da%20Argoeste%20e%20gostaria%20de%20mais%20informações%20sobre%20os%20produtos.
 ```
@@ -72,13 +79,16 @@ https://wa.me/5577999742551?text=Olá!%20Vim%20pelo%20site%20da%20Argoeste%20e%2
 ### 4.2 Google Maps Embed API
 
 **Mapa de Localização**
+
 ```
 GET https://www.google.com/maps/embed
 ```
 
 Parâmetros configurados:
-- Localização: Rua Peru, 454, Jardins - Barreiras, Bahia
-- Zoom e configurações de exibição
+
+* Localização: Rua Peru, 454, Jardins - Barreiras, Bahia
+
+* Zoom e configurações de exibição
 
 ## 5. Estrutura de Arquivos
 
@@ -150,3 +160,4 @@ const phoneNumber = '5577999742551'; // Número correto
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 ```
+
