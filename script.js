@@ -1,242 +1,82 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Mobile Menu Toggle
-    const menuToggle = document.querySelector('.menu-toggle')
-    const navLinks = document.querySelector('.nav-links')
 
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', function () {
-            menuToggle.classList.toggle('active')
-            navLinks.classList.toggle('active')
-        })
+  // ── Mobile nav ──────────────────────────────────────────────
+  const hamburger = document.getElementById('nav-hamburger');
+  const navLinks  = document.getElementById('nav-links');
 
-        // Close menu when clicking on a link
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                menuToggle.classList.remove('active')
-                navLinks.classList.remove('active')
-            })
-        })
+  hamburger?.addEventListener('click', function () {
+    const open = navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+  });
 
-        // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
-                menuToggle.classList.remove('active')
-                navLinks.classList.remove('active')
-            }
-        })
+  navLinks?.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      hamburger.classList.remove('open');
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!hamburger?.contains(e.target) && !navLinks?.contains(e.target)) {
+      navLinks?.classList.remove('open');
+      hamburger?.classList.remove('open');
     }
-    const mobileMenuIcon = document.querySelector('.mobile-menu-icon')
-    const nav = document.querySelector('nav')
+  });
 
-    if (mobileMenuIcon) {
-        mobileMenuIcon.addEventListener('click', function () {
-            nav.style.display = nav.style.display === 'block' ? 'none' : 'block'
-        })
+  // ── Smooth scroll ────────────────────────────────────────────
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const id = this.getAttribute('href');
+      const target = document.querySelector(id);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // ── FAQ accordion ────────────────────────────────────────────
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-q')?.addEventListener('click', function () {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(o => o.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // ── Calculator ───────────────────────────────────────────────
+  const areaInput   = document.getElementById('calc-area');
+  const pieceSelect = document.getElementById('calc-piece');
+  const doubleChk   = document.getElementById('calc-double');
+  const sacosEl     = document.getElementById('calc-sacos');
+  const kgEl        = document.getElementById('calc-kg');
+  const waBtn       = document.getElementById('calc-wa-btn');
+
+  function calcUpdate() {
+    const area   = Math.max(1, parseFloat(areaInput?.value) || 1);
+    const base   = parseFloat(pieceSelect?.value) || 4.5;
+    const double = doubleChk?.checked;
+    const yield_ = double ? base * 0.55 : base;
+    const sacos  = Math.max(1, Math.ceil(area / yield_));
+    const kg     = sacos * 20;
+    const piece  = pieceSelect?.options[pieceSelect.selectedIndex]?.text || '';
+
+    if (sacosEl) sacosEl.innerHTML = sacos;
+    if (kgEl)    kgEl.innerHTML    = `${kg}<span style="font-size:18px;margin-left:4px">kg</span>`;
+
+    if (waBtn) {
+      const msg = `Olá! Calculei ${sacos} sacos (~${kg}kg) pra ${area}m² em peças ${piece}${double ? ' (dupla camada)' : ''}. Pode me passar um orçamento?`;
+      waBtn.href = `https://wa.me/5577999742551?text=${encodeURIComponent(msg)}`;
     }
+  }
 
-    // Smooth Scrolling for Anchor Links
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault()
+  areaInput?.addEventListener('input', calcUpdate);
+  pieceSelect?.addEventListener('change', calcUpdate);
+  doubleChk?.addEventListener('change', calcUpdate);
+  calcUpdate();
 
-            const targetId = this.getAttribute('href')
-            const targetElement = document.querySelector(targetId)
-
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth',
-                })
-
-                // Close mobile menu if open
-                if (window.innerWidth <= 768) {
-                    nav.style.display = 'none'
-                }
-            }
-        })
-    })
-
-    // WhatsApp Button Functionality
-    const whatsappBtn = document.getElementById('whatsapp-btn')
-
-    if (whatsappBtn) {
-        whatsappBtn.addEventListener('click', function (e) {
-            e.preventDefault()
-
-            // Replace with the actual phone number (with country code)
-            const phoneNumber = '5577999742551' // Número correto: 55 (Brasil) + 77 (DDD) + 999742551
-
-            // Pre-programmed message
-            const message =
-                'Olá! Vim pelo site da Argoeste e gostaria de mais informações sobre os produtos.'
-
-            // Create WhatsApp URL
-            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-                message
-            )}`
-
-            // Open WhatsApp in a new tab
-            window.open(whatsappUrl, '_blank')
-        })
-    }
-
-    // Product Carousel
-    class ProductCarousel {
-        constructor() {
-            this.currentSlide = 0;
-            this.slides = document.querySelectorAll('.product-slide');
-            this.indicators = document.querySelectorAll('.indicator');
-            this.prevBtn = document.querySelector('.carousel-btn-prev');
-            this.nextBtn = document.querySelector('.carousel-btn-next');
-            this.autoplayInterval = null;
-            this.autoplayDelay = 5000;
-            this.isPlaying = true;
-            
-            this.init();
-        }
-        
-        init() {
-            if (this.slides.length === 0) return;
-            
-            // Event listeners for navigation buttons
-            this.prevBtn?.addEventListener('click', () => this.prevSlide());
-            this.nextBtn?.addEventListener('click', () => this.nextSlide());
-            
-            // Event listeners for indicators
-            this.indicators.forEach((indicator, index) => {
-                indicator.addEventListener('click', () => this.goToSlide(index));
-            });
-            
-            // Keyboard navigation
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowLeft') this.prevSlide();
-                if (e.key === 'ArrowRight') this.nextSlide();
-            });
-            
-            // Touch/swipe support
-            this.addTouchSupport();
-            
-            // Auto-play functionality
-            this.startAutoplay();
-            
-            // Pause on hover
-            const carousel = document.querySelector('.product-carousel');
-            carousel?.addEventListener('mouseenter', () => this.pauseAutoplay());
-            carousel?.addEventListener('mouseleave', () => this.startAutoplay());
-        }
-        
-        goToSlide(index) {
-            // Remove active class from current slide and indicator
-            this.slides[this.currentSlide]?.classList.remove('active');
-            this.indicators[this.currentSlide]?.classList.remove('active');
-            
-            // Update current slide
-            this.currentSlide = index;
-            
-            // Add active class to new slide and indicator
-            this.slides[this.currentSlide]?.classList.add('active');
-            this.indicators[this.currentSlide]?.classList.add('active');
-            
-            // Update carousel track position
-            const track = document.querySelector('.carousel-track');
-            if (track) {
-                track.style.transform = `translateX(-${this.currentSlide * 100}%)`;
-            }
-        }
-        
-        nextSlide() {
-            const nextIndex = (this.currentSlide + 1) % this.slides.length;
-            this.goToSlide(nextIndex);
-        }
-        
-        prevSlide() {
-            const prevIndex = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
-            this.goToSlide(prevIndex);
-        }
-        
-        startAutoplay() {
-            if (!this.isPlaying) return;
-            
-            this.autoplayInterval = setInterval(() => {
-                this.nextSlide();
-            }, this.autoplayDelay);
-        }
-        
-        pauseAutoplay() {
-            if (this.autoplayInterval) {
-                clearInterval(this.autoplayInterval);
-                this.autoplayInterval = null;
-            }
-        }
-        
-        addTouchSupport() {
-            const carousel = document.querySelector('.carousel-container');
-            if (!carousel) return;
-            
-            let startX = 0;
-            let endX = 0;
-            
-            carousel.addEventListener('touchstart', (e) => {
-                startX = e.touches[0].clientX;
-            });
-            
-            carousel.addEventListener('touchend', (e) => {
-                endX = e.changedTouches[0].clientX;
-                this.handleSwipe();
-            });
-            
-            const handleSwipe = () => {
-                const threshold = 50;
-                const diff = startX - endX;
-                
-                if (Math.abs(diff) > threshold) {
-                    if (diff > 0) {
-                        this.nextSlide();
-                    } else {
-                        this.prevSlide();
-                    }
-                }
-            };
-            
-            this.handleSwipe = handleSwipe;
-        }
-    }
-
-    // Initialize carousel
-    new ProductCarousel();
-
-    // Newsletter Form Submission
-    const newsletterForm = document.getElementById('newsletter-form')
-
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function (e) {
-            e.preventDefault()
-
-            // Get the email input value
-            const emailInput = this.querySelector('input[type="email"]')
-            const email = emailInput.value
-
-            // Here you would typically send the email to your server
-            // For now, we'll just show an alert
-            alert(`Obrigado por se inscrever com o email: ${email}`)
-
-            // Clear the form
-            this.reset()
-        })
-    }
-
-    // Header Scroll Effect
-    const header = document.querySelector('header')
-
-    if (header) {
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 50) {
-                header.style.padding = '10px 0'
-                header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)'
-            } else {
-                header.style.padding = '15px 0'
-                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)'
-            }
-        })
-    }
-})
+  // ── Lote code with current year ──────────────────────────────
+  const loteEl = document.getElementById('lote-code');
+  if (loteEl) loteEl.textContent = `lote AC-${new Date().getFullYear()}/03`;
+});
