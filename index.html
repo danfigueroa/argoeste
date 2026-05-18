@@ -1,832 +1,691 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Argoeste - Fábrica de Argamassa</title>
-        <!-- SEO Meta Tags -->
-        <meta
-            name="description"
-            content="Argoeste - Fábrica de argamassa de alta qualidade para construção civil. Soluções em argamassa com tecnologia e durabilidade."
-        />
-        <meta
-            name="keywords"
-            content="argamassa, construção, revestimento, assentamento, rejunte, Argoeste"
-        />
-        <meta name="author" content="Argoeste" />
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://danfigueroa.github.io/" />
-        <meta property="og:title" content="Argoeste - Fábrica de Argamassa" />
-        <meta
-            property="og:description"
-            content="Soluções em argamassa para construção civil com alta tecnologia e durabilidade"
-        />
-        <meta property="og:image" content="images/logo.png" />
-        <!-- Twitter -->
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://danfigueroa.github.io/" />
-        <meta
-            property="twitter:title"
-            content="Argoeste - Fábrica de Argamassa"
-        />
-        <meta
-            property="twitter:description"
-            content="A solução em argamassa com alto rendimento para a sua obra."
-        />
-        <meta property="twitter:image" content="images/logo.svg" />
-        <!-- Favicon -->
-        <link rel="icon" href="images/logo.svg" type="image/svg+xml" />
-        <!-- Stylesheets -->
-        <link rel="stylesheet" href="styles.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
-            rel="stylesheet"
-        />
-        <!-- EmailJS removido - usando sistema mailto nativo -->
-    </head>
-    <body>
-        <!-- Navegação -->
-        <nav>
-            <div class="container">
-                <div class="logo">
-                    <img src="images/logo.png" alt="Argoeste Logo" />
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#produtos">Produtos</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                    <li><a href="#instagram">Instagram</a></li>
-                </ul>
-                <div class="menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Argoeste — Argamassa de alto rendimento</title>
+  <meta name="description" content="Fábrica de argamassa do Oeste da Bahia. Alta tecnologia, alto rendimento, suporte técnico em cada obra.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://argoeste.com.br/">
+  <meta property="og:title" content="Argoeste — Argamassa de alto rendimento">
+  <meta property="og:description" content="Fábrica de argamassa do Oeste da Bahia. Alta tecnologia, alto rendimento, suporte técnico em cada obra.">
+  <meta property="og:image" content="images/hero-image.png">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-        <section id="inicio" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Qualidade e Resistência em Cada Aplicação</h1>
-                    <p>
-                        Soluções em argamassa para construção civil com alta
-                        tecnologia e durabilidade
-                    </p>
-                    <a href="#contato" class="btn btn-primary"
-                        >Solicite um Orçamento</a
-                    >
-                </div>
-                <div class="hero-image">
-                    <img src="images/hero-image.png" alt="Argamassa Argoeste" />
-                </div>
-            </div>
-        </section>
+<!-- ── Nav ──────────────────────────────────────────────────── -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <div class="brand-mark">A</div>
+      <div class="brand-name">Argoeste</div>
+    </a>
+    <nav class="nav-links" id="nav-links">
+      <a href="#produtos">Produtos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#calculadora">Calculadora</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="https://wa.me/5577999742551" target="_blank" rel="noopener">
+      WhatsApp <span>↗</span>
+    </a>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
-        <!-- Sobre a Argoeste -->
-        <section id="sobre" class="section-padding">
-            <div class="container">
-                <h2 class="section-title">Sobre a Argoeste</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>
-                            A ARGOESTE é uma empresa especializada na fabricação
-                            de argamassas de alta qualidade para a construção
-                            civil. Localizada no Oeste da Bahia, desenvolvemos
-                            produtos com foco na inovação, através dos melhores
-                            insumos para entregar segurança e rendimento em sua
-                            obra!
-                        </p>
-                        <p>
-                            Nosso compromisso é atender aos nossos clientes,
-                            comerciantes e construtores com argamassas e
-                            rejuntes de alta performance por um preço acessível e
-                            competitivo com suporte técnico especializado em
-                            cada projeto.
-                        </p>
-                        <ul class="about-features">
-                            <li>⁠Tecnologia avançada</li>
-                            <li>Compromisso com a qualidade</li>
-                            <li>Alto rendimento</li>
-                            <li>Suporte técnico especializado</li>
-                            <li>Entrega rápida</li>
-                        </ul>
-                    </div>
-                    <div class="about-image">
-                        <img src="images/image1.jpeg" alt="Fábrica Argoeste" />
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Produtos -->
-        <section id="produtos" class="section-padding bg-light">
-            <div class="container">
-                <h2 class="section-title">Nossos Produtos</h2>
-                <p class="section-description">
-                    Conheça nossa linha completa de argamassas desenvolvidas
-                    para atender às mais diversas necessidades da construção
-                    civil.
-                </p>
-                <div class="product-carousel">
-                    <div class="carousel-container">
-                        <div class="carousel-track">
-                            <div class="product-slide active">
-                                <div class="product-card">
-                                    <div class="product-image">
-                                        <img
-                                            src="images/argamassa-aci.png"
-                                            alt="Argamassa AC-I"
-                                        />
-                                    </div>
-                                    <div class="product-info">
-                                        <h3>Argamassa AC-I</h3>
-                                        <p>
-                                            Argamassa desenvolvida pela ARGOESTE
-                                            para assentamento de revestimentos
-                                            cerâmicos de paredes e pisos em
-                                            áreas internas. Sua aderência é
-                                            alcançada por meios mecânicos,
-                                            garantindo um desempenho excepcional
-                                            e um rendimento muito maior!
-                                        </p>
-                                        <ul class="product-features">
-                                            <li>
-                                                <i class="fas fa-home"></i>
-                                                Áreas internas e externas
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-th"></i> Piso e
-                                                parede
-                                            </li>
-                                            <li>
-                                                <i
-                                                    class="fas fa-expand-arrows-alt"
-                                                ></i>
-                                                Para peças cerâmicas de até 40 X
-                                                40 cm
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-fill-drip"></i>
-                                                Cor: Cinza
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-box"></i>
-                                                Embalagem a vácuo de 20kg
-                                            </li>
-                                        </ul>
-                                        <div class="product-recommendations">
-                                            <h4>Recomendações:</h4>
-                                            <p>
-                                                Para peças acima de 30 x 30 cm
-                                                deverá ser utilizado o método de
-                                                dupla camada. A superfície da
-                                                base não deve apresentar desvios
-                                                de planeza e/ou deformações, e
-                                                deve estar firme, limpa, seca e
-                                                curada (NBR 13749).
-                                            </p>
-                                        </div>
-                                        <a
-                                            href="#contato"
-                                            class="btn btn-outline"
-                                            >Saiba Mais</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="product-slide">
-                                <div class="product-card">
-                                    <div class="product-image">
-                                        <img
-                                            src="images/argamassa-acii.png"
-                                            alt="Argamassa AC-II"
-                                        />
-                                    </div>
-                                    <div class="product-info">
-                                        <h3>Argamassa AC-II</h3>
-                                        <p>
-                                            Argamassa desenvolvida pela ARGOESTE
-                                            para assentamento de azulejos e
-                                            pisos cerâmicos em áreas internas e
-                                            externas. Sua fórmula enriquecida
-                                            com polímeros de alta qualidade
-                                            proporciona uma aderência química
-                                            sólida em áreas que possam estar
-                                            sujeitas à exposição à umidade.
-                                        </p>
-                                        <ul class="product-features">
-                                            <li>
-                                                <i class="fas fa-home"></i>
-                                                Áreas internas e externas
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-th"></i> Piso e
-                                                parede
-                                            </li>
-                                            <li>
-                                                <i
-                                                    class="fas fa-expand-arrows-alt"
-                                                ></i>
-                                                Para fachadas e pisos externos
-                                            </li>
-                                            <li>
-                                                <i
-                                                    class="fas fa-expand-arrows-alt"
-                                                ></i>
-                                                Para interiores, cerâmicas de
-                                                até 60 X 60 cm
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-fill-drip"></i>
-                                                Cor: Cinza
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-box"></i>
-                                                Embalagem a vácuo de 20kg
-                                            </li>
-                                        </ul>
-                                        <div class="product-recommendations">
-                                            <h4>Recomendações:</h4>
-                                            <p>
-                                                Para peças acima de 30 x 30 cm
-                                                deverá ser utilizado o método de
-                                                dupla camada. A superfície da
-                                                base não deve apresentar desvios
-                                                de planeza e/ou deformações, e
-                                                deve estar firme, limpa, seca e
-                                                curada (NBR 13749).
-                                            </p>
-                                        </div>
-                                        <a
-                                            href="#contato"
-                                            class="btn btn-outline"
-                                            >Saiba Mais</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="product-slide">
-                                <div class="product-card">
-                                    <div class="product-image">
-                                        <img
-                                            src="images/argamassa-aciii.png"
-                                            alt="Argamassa AC-III"
-                                        />
-                                    </div>
-                                    <div class="product-info">
-                                        <h3>Argamassa AC-III</h3>
-                                        <p>
-                                            Argamassa desenvolvida pela ARGOESTE
-                                            para assentamento de porcelanatos em
-                                            pisos e fachadas de áreas internas e
-                                            externas. É a argamassa mais robusta
-                                            da nossa linha, com uma fórmula rica
-                                            em aditivos que promovem sua
-                                            aderência excepcional. Ela fixa
-                                            peças menos porosas, possibilitando
-                                            sua aplicação em diversos tipos de
-                                            revestimentos, incluindo piso sobre
-                                            piso, grandes peças, fachadas e
-                                            cobertura de lajes.
-                                        </p>
-                                        <ul class="product-features">
-                                            <li>
-                                                <i class="fas fa-home"></i>
-                                                Áreas internas
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-th"></i> Pisos,
-                                                paredes, fachadas e piscinas
-                                            </li>
-                                            <li>
-                                                <i
-                                                    class="fas fa-expand-arrows-alt"
-                                                ></i>
-                                                Alta Performance
-                                            </li>
-                                            <li>
-                                                <i
-                                                    class="fas fa-expand-arrows-alt"
-                                                ></i>
-                                                Porcelanatos, grandes peças e
-                                                piso sobre piso.
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-fill-drip"></i>
-                                                Cor: Cinza
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-box"></i>
-                                                Embalagem a vácuo de 20kg
-                                            </li>
-                                        </ul>
-                                        <div class="product-recommendations">
-                                            <h4>Recomendações:</h4>
-                                            <p>
-                                                Para peças acima de 30 x 30 cm
-                                                deverá ser utilizado o método de
-                                                dupla camada. A superfície da
-                                                base não deve apresentar desvios
-                                                de planeza e/ou deformações, e
-                                                deve estar firme, limpa, seca e
-                                                curada (NBR 13749).
-                                            </p>
-                                        </div>
-                                        <a
-                                            href="#contato"
-                                            class="btn btn-outline"
-                                            >Saiba Mais</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="product-slide">
-                                <div class="product-card">
-                                    <div class="product-image">
-                                        <img
-                                            src="images/rejuntei.png"
-                                            alt="Rejunte Tipo I"
-                                        />
-                                    </div>
-                                    <div class="product-info">
-                                        <h3>Rejunte Tipo I</h3>
-                                        <p>
-                                            O Rejunte TIPO I da ARGOESTE é ideal
-                                            para assentamento de azulejos e
-                                            pisos cerâmicos em áreas internas.
-                                            Sua fórmula avançada e polímeros de
-                                            alta qualidade oferecem aderência
-                                            química superior, atendendo ao alto
-                                            padrão de qualidade Argoeste. Com
-                                            acabamento impecável e duradouro
-                                            para sua obra.
-                                        </p>
-                                        <ul class="product-features">
-                                            <li>
-                                                <i class="fas fa-home"></i>
-                                                Áreas internas
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-th"></i> Piso e
-                                                parede
-                                            </li>
-                                            <li>
-                                                <i
-                                                    class="fas fa-expand-arrows-alt"
-                                                ></i>
-                                                Para peças cerâmicas e azulejos
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-box"></i>
-                                                Embalagem de 1kg - Fardo com 20
-                                                unidades
-                                            </li>
-                                        </ul>
-                                        <a
-                                            href="#contato"
-                                            class="btn btn-outline"
-                                            >Saiba Mais</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="product-slide">
-                                <div class="product-card">
-                                    <div class="product-image">
-                                        <img
-                                            src="images/rejuntepc.png"
-                                            alt="Rejunte Procelanato e Ceramicas"
-                                        />
-                                    </div>
-                                    <div class="product-info">
-                                        <h3>Rejunte Porcelanato e Cerâmicas</h3>
-                                        <p>
-                                            O Rejunte PARA PORCELANATO da
-                                            ARGOESTE é projetado especialmente
-                                            para porcelanatos e cerâmicas tanto
-                                            de áreas internas quanto externas.
-                                            Garanta um resultado excepcional com
-                                            a alta aderência e estética
-                                            impecável do nosso rejunte para
-                                            porcelanato.
-                                        </p>
-                                        <ul class="product-features">
-                                            <li>
-                                                <i class="fas fa-home"></i>
-                                                Áreas internas e externas
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-th"></i> Piso e
-                                                parede
-                                            </li>
-                                            <li>
-                                                <i
-                                                    class="fas fa-expand-arrows-alt"
-                                                ></i>
-                                                Para fachadas e pisos externos
-                                            </li>
-                                            <li>
-                                                <i
-                                                    class="fas fa-expand-arrows-alt"
-                                                ></i>
-                                                Para peças cerâmicas e azulejos
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-box"></i>
-                                                Embalagem de 1kg - Fardo com 20
-                                                unidades
-                                            </li>
-                                        </ul>
-                                        <a
-                                            href="#contato"
-                                            class="btn btn-outline"
-                                            >Saiba Mais</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Navigation Arrows -->
-                        <button
-                            class="carousel-btn carousel-btn-prev"
-                            aria-label="Produto anterior"
-                        >
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button
-                            class="carousel-btn carousel-btn-next"
-                            aria-label="Próximo produto"
-                        >
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div>
-
-                    <!-- Indicators -->
-                    <div class="carousel-indicators">
-                        <button
-                            class="indicator active"
-                            data-slide="0"
-                            aria-label="Produto 1"
-                        ></button>
-                        <button
-                            class="indicator"
-                            data-slide="1"
-                            aria-label="Produto 2"
-                        ></button>
-                        <button
-                            class="indicator"
-                            data-slide="2"
-                            aria-label="Produto 3"
-                        ></button>
-                        <button
-                            class="indicator"
-                            data-slide="3"
-                            aria-label="Produto 4"
-                        ></button>
-                        <button
-                            class="indicator"
-                            data-slide="4"
-                            aria-label="Produto 5"
-                        ></button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="diferenciais" class="features">
-            <div class="container">
-                <h2 class="section-title">Nossos Diferenciais</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="icon">
-                            <i class="fas fa-flask"></i>
-                        </div>
-                        <h3>Tecnologia Avançada</h3>
-                        <p>
-                            Investimento constante em pesquisa e desenvolvimento
-                            para produtos inovadores e de alta performance.
-                        </p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="icon">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <h3>Compromisso com a Qualidade</h3>
-                        <p>
-                            Produtos que atendem às normas técnicas e passam por
-                            rigorosos controles de qualidade em todas as etapas.
-                        </p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3>Alto Rendimento</h3>
-                        <p>
-                            Produtos formulados para máxima eficiência e
-                            produtividade em suas aplicações.
-                        </p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="icon">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <h3>Suporte Técnico</h3>
-                        <p>
-                            Equipe especializada para a orientação na escolha e
-                            aplicação dos produtos com total suporte.
-                        </p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="icon">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h3>Entrega Rápida</h3>
-                        <p>
-                            Sistema logístico eficiente para a entrega dos
-                            produtos no prazo combinado com você.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contato" class="contact">
-            <div class="container">
-                <h2 class="section-title">Entre em Contato</h2>
-                <div class="contact-container">
-                    <div class="contact-info">
-                        <h3>Informações de Contato</h3>
-                        <div class="info-item">
-                            <i class="fas fa-phone"></i>
-                            <p>(77) 9 9974-2551</p>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-envelope"></i>
-                            <p>contato@argoeste.com.br</p>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <p>Rua Peru, 454, Jardins - Barreiras, Bahia</p>
-                        </div>
-                        <div class="info-item">
-                            <i class="fab fa-instagram instagram-filled"></i>
-                            <p>
-                                <a
-                                    href="https://www.instagram.com/argoeste/"
-                                    target="_blank"
-                                    >@argoeste</a
-                                >
-                            </p>
-                        </div>
-                    </div>
-                    <div class="whatsapp-contact">
-                        <h3>Fale Conosco pelo WhatsApp</h3>
-                        <p>
-                            Clique no botão abaixo para iniciar uma conversa e
-                            solicitar orçamentos ou tirar dúvidas sobre nossos
-                            produtos.
-                        </p>
-                        <a
-                            href="https://wa.me/5577999742551"
-                            class="whatsapp-btn"
-                            id="whatsapp-btn"
-                        >
-                            <i class="fab fa-whatsapp"></i> Conversar no
-                            WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="localizacao" class="location">
-            <div class="container">
-                <h2 class="section-title">Nossa Localização</h2>
-                <div class="map-container">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.5666913660552!2d-44.95065812482296!3d-12.141772143677182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x75ff5e0e80c4a35%3A0xddc18f20e9c44173!2sArgoeste%20Supermassa!5e0!3m2!1sen!2sbr!4v1742777425429!5m2!1sen!2sbr"
-                        width="100%"
-                        height="450"
-                        style="border: 0"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                    ></iframe>
-                </div>
-            </div>
-        </section>
-
-        <!-- Instagram Feed -->
-        <section id="instagram" class="section">
-            <div class="container">
-                <h2 class="section-title">Siga-nos no Instagram</h2>
-
-                <!-- Widget do SnapWidget -->
-                <div class="instagram-widget-container">
-                    <iframe
-                        src="https://snapwidget.com/embed/1088847"
-                        class="snapwidget-widget"
-                        allowtransparency="true"
-                        frameborder="0"
-                        scrolling="no"
-                        style="
-                            border: none;
-                            overflow: hidden;
-                            width: 100%;
-                            height: 400px;
-                        "
-                    >
-                    </iframe>
-                </div>
-
-                <!-- Fallback Grid (caso o widget não carregue) -->
-                <div
-                    id="instagram-fallback"
-                    class="instagram-grid"
-                    style="display: none"
-                >
-                    <div class="instagram-item">
-                        <img
-                            src="images/product1.svg"
-                            alt="Produto Argoeste"
-                            class="instagram-img"
-                        />
-                    </div>
-                    <div class="instagram-item">
-                        <img
-                            src="images/argamassa-aci.svg"
-                            alt="Argamassa ACI"
-                            class="instagram-img"
-                        />
-                    </div>
-                    <div class="instagram-item">
-                        <img
-                            src="images/product2.svg"
-                            alt="Produto Argoeste"
-                            class="instagram-img"
-                        />
-                    </div>
-                    <div class="instagram-item">
-                        <img
-                            src="images/product3.svg"
-                            alt="Produto Argoeste"
-                            class="instagram-img"
-                        />
-                    </div>
-                    <div class="instagram-item">
-                        <img
-                            src="images/product4.svg"
-                            alt="Produto Argoeste"
-                            class="instagram-img"
-                        />
-                    </div>
-                    <div class="instagram-item">
-                        <img
-                            src="images/hero-image.svg"
-                            alt="Argoeste"
-                            class="instagram-img"
-                        />
-                    </div>
-                </div>
-
-                <div class="instagram-cta">
-                    <a
-                        href="https://instagram.com/argoeste"
-                        target="_blank"
-                        class="btn btn-primary"
-                    >
-                        <i class="fab fa-instagram instagram-filled"></i>
-                        Seguir no Instagram
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <footer>
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-logo">
-                        <img src="images/logo.png" alt="Argoeste Logo" />
-                        <p>Qualidade e resistência em cada aplicação</p>
-                    </div>
-                    <div class="footer-links">
-                        <h3>Links Rápidos</h3>
-                        <ul>
-                            <li><a href="#inicio">Início</a></li>
-                            <li><a href="#sobre">Sobre Nós</a></li>
-                            <li><a href="#produtos">Produtos</a></li>
-                            <li><a href="#contato">Contato</a></li>
-                            <li><a href="#localizacao">Localização</a></li>
-                            <li><a href="#instagram">Instagram</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-newsletter">
-                        <h3>Receba Novidades</h3>
-                        <p>
-                            Inscreva-se para receber atualizações sobre produtos
-                            e promoções
-                        </p>
-
-                        <form id="newsletter-form">
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="Seu e-mail"
-                                required
-                            />
-                            <button type="submit" class="btn btn-primary">
-                                Inscrever
-                            </button>
-                        </form>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2025 Argoeste - Todos os direitos reservados</p>
-                </div>
-            </div>
-        </footer>
-
-        <!-- Newsletter Admin Button -->
-        <button
-            class="newsletter-admin-btn"
-            id="newsletter-admin-btn"
-            title="Gerenciar Newsletter"
-        >
-            <i class="fas fa-cog"></i>
-        </button>
-
-        <!-- Newsletter Modal -->
-        <div class="newsletter-modal" id="newsletter-modal">
-            <div class="newsletter-modal__content">
-                <div class="newsletter-modal__header">
-                    <h3>Gerenciar Newsletter</h3>
-                    <button
-                        class="newsletter-modal__close"
-                        id="newsletter-modal-close"
-                    >
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <div class="newsletter-modal__body">
-                    <div class="newsletter-stats">
-                        <div class="newsletter-stat">
-                            <span
-                                class="newsletter-stat__number"
-                                id="newsletter-count"
-                                >0</span
-                            >
-                            <span class="newsletter-stat__label"
-                                >Inscritos</span
-                            >
-                        </div>
-                        <div class="newsletter-stat">
-                            <span
-                                class="newsletter-stat__number"
-                                id="newsletter-today"
-                                >0</span
-                            >
-                            <span class="newsletter-stat__label">Hoje</span>
-                        </div>
-                    </div>
-
-                    <div class="newsletter-actions">
-                        <button class="btn btn-primary" id="export-csv">
-                            <i class="fas fa-download"></i> Exportar CSV
-                        </button>
-                        <button class="btn btn-secondary" id="export-json">
-                            <i class="fas fa-file-code"></i> Exportar JSON
-                        </button>
-                        <button class="btn btn-danger" id="clear-list">
-                            <i class="fas fa-trash"></i> Limpar Lista
-                        </button>
-                    </div>
-
-                    <div class="newsletter-list">
-                        <h4>Lista de Emails</h4>
-                        <div class="newsletter-emails" id="newsletter-emails">
-                            <div class="newsletter-empty">
-                                Nenhum email cadastrado ainda.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- ── Hero ─────────────────────────────────────────────────── -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="tag"><span class="dot"></span>Fábrica · Oeste da Bahia · desde 2021</span>
+        <h1 class="display" style="margin-top:24px">
+          Argamassa<br>que <span class="accent">rende</span> mais<br>na sua obra.
+        </h1>
+        <p class="hero-sub">
+          Produzida em Barreiras com tecnologia, aditivos premium e controle de qualidade rigoroso.
+          Embalagem a vácuo, 20 kg, e rendimento que o pedreiro sente na colher.
+        </p>
+        <div class="hero-cta-row">
+          <a class="btn btn-accent" href="https://wa.me/5577999742551" target="_blank" rel="noopener">
+            Solicitar orçamento <span>→</span>
+          </a>
+          <a class="btn btn-ghost" href="#produtos">Ver linha de produtos</a>
         </div>
+      </div>
 
-        <script src="script.js"></script>
-        <script src="instagram-feed.js"></script>
-        <script src="newsletter.js"></script>
-    </body>
+      <div class="hero-right">
+        <div class="hero-visual">
+          <div class="stripe-bg"></div>
+          <img src="images/hero-image.png" alt="Saco de argamassa Argoeste">
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="num mono">+35%</div>
+            <div class="lbl">rendimento por saco</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">5</div>
+            <div class="lbl">produtos na linha</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">NBR<br><span style="font-size:.45em;letter-spacing:.05em">14081 / 13754</span></div>
+            <div class="lbl">normas atendidas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Marquee ───────────────────────────────────────────────── -->
+<div class="marquee">
+  <div class="track">
+    <span class="item"><span class="dot"></span>ARGAMASSA AC-I</span>
+    <span class="item"><span class="dot"></span>ARGAMASSA AC-II</span>
+    <span class="item"><span class="dot"></span>ARGAMASSA AC-III</span>
+    <span class="item"><span class="dot"></span>REJUNTE TIPO I</span>
+    <span class="item"><span class="dot"></span>REJUNTE PORCELANATO</span>
+    <span class="item"><span class="dot"></span>ENTREGA RÁPIDA</span>
+    <span class="item"><span class="dot"></span>SUPORTE TÉCNICO</span>
+    <!-- duplicate for seamless loop -->
+    <span class="item"><span class="dot"></span>ARGAMASSA AC-I</span>
+    <span class="item"><span class="dot"></span>ARGAMASSA AC-II</span>
+    <span class="item"><span class="dot"></span>ARGAMASSA AC-III</span>
+    <span class="item"><span class="dot"></span>REJUNTE TIPO I</span>
+    <span class="item"><span class="dot"></span>REJUNTE PORCELANATO</span>
+    <span class="item"><span class="dot"></span>ENTREGA RÁPIDA</span>
+    <span class="item"><span class="dot"></span>SUPORTE TÉCNICO</span>
+  </div>
+</div>
+
+<!-- ── Sobre ─────────────────────────────────────────────────── -->
+<section class="section" id="sobre">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow" style="margin-bottom:14px">[ 01 / sobre ]</div>
+        <h2 class="display-md">Feita no Oeste<br>da Bahia, pensada<br>pra render.</h2>
+      </div>
+      <p class="lede">
+        Somos uma fábrica de argamassa de Barreiras-BA. Combinamos formulações
+        modernas, aditivos de alta qualidade e processo industrial controlado
+        para entregar produto previsível, eficiente e com preço competitivo —
+        seja pra obra grande, seja pro reformista do bairro.
+      </p>
+    </div>
+    <div class="sobre-grid">
+      <div class="sobre-text">
+        <p>
+          A ARGOESTE nasceu pra resolver um problema concreto: argamassa consistente,
+          com rendimento real e suporte técnico de verdade. Cada saco que sai da nossa
+          fábrica passa por controle de mistura, umidade e granulometria.
+        </p>
+        <p>
+          Atendemos construtores, lojas de material de construção e quem está tocando a
+          própria obra — com a mesma seriedade técnica e orientação na hora da escolha e
+          da aplicação.
+        </p>
+        <ul class="sobre-bullets">
+          <li><span class="num">01</span><span>Tecnologia avançada em formulação</span></li>
+          <li><span class="num">02</span><span>Controle de qualidade lote a lote</span></li>
+          <li><span class="num">03</span><span>Alto rendimento por embalagem</span></li>
+          <li><span class="num">04</span><span>Suporte técnico do orçamento à aplicação</span></li>
+          <li><span class="num">05</span><span>Logística rápida pra obras do Oeste da Bahia</span></li>
+        </ul>
+      </div>
+      <div class="sobre-photo">
+        <img src="images/image1.jpeg" alt="Fábrica Argoeste">
+        <div class="cap">Fábrica · Barreiras, BA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Diferenciais ──────────────────────────────────────────── -->
+<section class="section" id="diferenciais" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow" style="margin-bottom:14px">[ 02 / diferenciais ]</div>
+        <h2 class="display-md">Cinco motivos<br>pra fechar<br>com a gente.</h2>
+      </div>
+      <p class="lede">
+        Não vendemos só saco de argamassa. Vendemos previsibilidade, rendimento e
+        tranquilidade na obra — do orçamento ao último metro quadrado assentado.
+      </p>
+    </div>
+    <div class="diff-grid">
+      <div class="diff">
+        <div class="ix">[ 01 ]</div>
+        <h3>Tecnologia&#10;avançada</h3>
+        <p>Pesquisa e desenvolvimento contínuos. Formulações pensadas pra performance real, não pra rótulo.</p>
+      </div>
+      <div class="diff">
+        <div class="ix">[ 02 ]</div>
+        <h3>Compromisso&#10;com qualidade</h3>
+        <p>Atendemos NBR 14081 e NBR 13754. Cada lote tem controle de mistura, umidade e granulometria.</p>
+      </div>
+      <div class="diff">
+        <div class="ix">[ 03 ]</div>
+        <h3>Alto&#10;rendimento</h3>
+        <p>Até +35% de rendimento por embalagem comparado à média do mercado regional.</p>
+      </div>
+      <div class="diff">
+        <div class="ix">[ 04 ]</div>
+        <h3>Suporte&#10;técnico</h3>
+        <p>Equipe pronta pra orientar escolha, dosagem e aplicação. Antes e durante a obra.</p>
+      </div>
+      <div class="diff">
+        <div class="ix">[ 05 ]</div>
+        <h3>Entrega&#10;rápida</h3>
+        <p>Logística própria pra obras e revendas do Oeste da Bahia. Pedido e prazo combinados na hora.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Produtos ──────────────────────────────────────────────── -->
+<section class="section" id="produtos" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow" style="margin-bottom:14px">[ 03 / produtos ]</div>
+        <h2 class="display-md">Cinco produtos.<br>Toda obra<br>resolvida.</h2>
+      </div>
+      <p class="lede">
+        Três argamassas colantes e dois rejuntes. Cobrimos da cerâmica comum em área
+        interna até porcelanato de fachada e piso sobre piso. Embalagem a vácuo, 20 kg,
+        formulação consistente.
+      </p>
+    </div>
+    <div class="prod-grid">
+
+      <!-- AC-I -->
+      <article class="prod">
+        <div class="prod-thumb">
+          <span class="badge">ARGAMASSA</span>
+          <img src="images/argamassa-aci.png" alt="Argamassa AC-I">
+        </div>
+        <div class="prod-head">
+          <h3>AC-I</h3>
+          <span class="kind">AC-I</span>
+        </div>
+        <p>Pra assentamento de revestimentos cerâmicos em paredes e pisos de áreas internas. Aderência mecânica, ótimo rendimento.</p>
+        <ul class="prod-specs">
+          <li><span class="k">aplicação</span><span class="v">interna</span></li>
+          <li><span class="k">peças</span><span class="v">até 40×40 cm</span></li>
+          <li><span class="k">cor</span><span class="v">cinza</span></li>
+          <li><span class="k">embalagem</span><span class="v">20 kg · vácuo</span></li>
+          <li><span class="k">rendimento</span><span class="v">≈ 4,5 m² / saco</span></li>
+          <li><span class="k">norma</span><span class="v">NBR 14081</span></li>
+        </ul>
+        <div class="prod-foot">
+          <span class="price">cotação sob consulta</span>
+          <a class="btn btn-ghost btn-sm" href="https://wa.me/5577999742551" target="_blank" rel="noopener">Orçar →</a>
+        </div>
+      </article>
+
+      <!-- AC-II -->
+      <article class="prod">
+        <div class="prod-thumb">
+          <span class="badge">ARGAMASSA</span>
+          <img src="images/argamassa-acii.png" alt="Argamassa AC-II">
+        </div>
+        <div class="prod-head">
+          <h3>AC-II</h3>
+          <span class="kind">AC-II</span>
+        </div>
+        <p>Pra cerâmicas e azulejos em áreas internas e externas. Polímeros que garantem aderência química em ambientes úmidos.</p>
+        <ul class="prod-specs">
+          <li><span class="k">aplicação</span><span class="v">interna · externa</span></li>
+          <li><span class="k">peças</span><span class="v">até 60×60 cm</span></li>
+          <li><span class="k">cor</span><span class="v">cinza</span></li>
+          <li><span class="k">embalagem</span><span class="v">20 kg · vácuo</span></li>
+          <li><span class="k">rendimento</span><span class="v">≈ 4,5 m² / saco</span></li>
+          <li><span class="k">norma</span><span class="v">NBR 14081</span></li>
+        </ul>
+        <div class="prod-foot">
+          <span class="price">cotação sob consulta</span>
+          <a class="btn btn-ghost btn-sm" href="https://wa.me/5577999742551" target="_blank" rel="noopener">Orçar →</a>
+        </div>
+      </article>
+
+      <!-- AC-III -->
+      <article class="prod">
+        <div class="prod-thumb">
+          <span class="badge">ARGAMASSA</span>
+          <img src="images/argamassa-aciii.png" alt="Argamassa AC-III">
+        </div>
+        <div class="prod-head">
+          <h3>AC-III</h3>
+          <span class="kind">AC-III</span>
+        </div>
+        <p>A mais robusta da linha. Pra porcelanatos, fachadas, piscinas e piso sobre piso. Aderência excepcional em peças pouco porosas.</p>
+        <ul class="prod-specs">
+          <li><span class="k">aplicação</span><span class="v">interna · externa · fachada</span></li>
+          <li><span class="k">peças</span><span class="v">grandes formatos</span></li>
+          <li><span class="k">cor</span><span class="v">cinza</span></li>
+          <li><span class="k">embalagem</span><span class="v">20 kg · vácuo</span></li>
+          <li><span class="k">rendimento</span><span class="v">≈ 4,0 m² / saco</span></li>
+          <li><span class="k">norma</span><span class="v">NBR 14081</span></li>
+        </ul>
+        <div class="prod-foot">
+          <span class="price">cotação sob consulta</span>
+          <a class="btn btn-ghost btn-sm" href="https://wa.me/5577999742551" target="_blank" rel="noopener">Orçar →</a>
+        </div>
+      </article>
+
+      <!-- Rejunte Tipo I -->
+      <article class="prod">
+        <div class="prod-thumb">
+          <span class="badge">REJUNTE</span>
+          <img src="images/rejuntei.png" alt="Rejunte Tipo I">
+        </div>
+        <div class="prod-head">
+          <h3>Rejunte Tipo I</h3>
+          <span class="kind">TIPO I</span>
+        </div>
+        <p>Acabamento impecável pra azulejos e pisos cerâmicos em áreas internas. Fórmula com polímeros, alta aderência.</p>
+        <ul class="prod-specs">
+          <li><span class="k">aplicação</span><span class="v">interna</span></li>
+          <li><span class="k">uso</span><span class="v">piso e parede</span></li>
+          <li><span class="k">embalagem</span><span class="v">1 kg · fardo c/ 20</span></li>
+          <li><span class="k">norma</span><span class="v">NBR 14992</span></li>
+        </ul>
+        <div class="prod-foot">
+          <span class="price">cotação sob consulta</span>
+          <a class="btn btn-ghost btn-sm" href="https://wa.me/5577999742551" target="_blank" rel="noopener">Orçar →</a>
+        </div>
+      </article>
+
+      <!-- Rejunte Porcelanato -->
+      <article class="prod">
+        <div class="prod-thumb">
+          <span class="badge">REJUNTE</span>
+          <img src="images/rejuntepc.png" alt="Rejunte Porcelanato">
+        </div>
+        <div class="prod-head">
+          <h3>Rejunte Porcelanato</h3>
+          <span class="kind">PORCELANATO</span>
+        </div>
+        <p>Projetado pra porcelanatos e cerâmicas em áreas internas e externas. Estética impecável, alta aderência, fachada ok.</p>
+        <ul class="prod-specs">
+          <li><span class="k">aplicação</span><span class="v">interna · externa</span></li>
+          <li><span class="k">uso</span><span class="v">fachada · piso · parede</span></li>
+          <li><span class="k">embalagem</span><span class="v">1 kg · fardo c/ 20</span></li>
+          <li><span class="k">norma</span><span class="v">NBR 14992</span></li>
+        </ul>
+        <div class="prod-foot">
+          <span class="price">cotação sob consulta</span>
+          <a class="btn btn-ghost btn-sm" href="https://wa.me/5577999742551" target="_blank" rel="noopener">Orçar →</a>
+        </div>
+      </article>
+
+      <!-- Help card -->
+      <article class="prod prod-dark">
+        <div class="prod-dark-inner">
+          <span class="eyebrow">↘&nbsp; não sabe qual escolher?</span>
+          <h3 class="display-sm">Nosso técnico ajuda você a escolher a argamassa certa pra cada peça e ambiente.</h3>
+          <p>Mande foto da peça, área e ambiente — a gente recomenda o produto, calcula a quantidade e fecha o orçamento na hora.</p>
+          <a class="btn btn-accent" href="https://wa.me/5577999742551" target="_blank" rel="noopener" style="align-self:flex-start;margin-top:auto">
+            Falar com técnico <span>→</span>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Calculadora ───────────────────────────────────────────── -->
+<section class="section" id="calculadora" style="padding-top:0">
+  <div class="wrap">
+    <div class="calc-wrap">
+      <div class="calc-info">
+        <span class="eyebrow">[ 04 / calculadora ]</span>
+        <h3>Calcule quanto<br>vai precisar.</h3>
+        <p>
+          Estimativa rápida de sacos e quilos de argamassa colante a partir da área e do tamanho
+          da peça. Pra cotação exata, mande o resultado pelo WhatsApp e a gente fecha o orçamento.
+        </p>
+        <a class="btn btn-accent" id="calc-wa-btn" href="https://wa.me/5577999742551" target="_blank" rel="noopener">
+          Enviar resultado no WhatsApp <span>→</span>
+        </a>
+      </div>
+      <div class="calc-form">
+        <div class="calc-fields">
+          <div class="calc-field">
+            <label>Área a revestir (m²)</label>
+            <input type="number" id="calc-area" min="1" value="40">
+          </div>
+          <div class="calc-field">
+            <label>Tamanho da peça</label>
+            <select id="calc-piece">
+              <option value="5.5">10 × 10 cm</option>
+              <option value="5.0">20 × 20 cm</option>
+              <option value="4.8">30 × 30 cm</option>
+              <option value="4.5" selected>40 × 40 cm</option>
+              <option value="4.2">60 × 60 cm</option>
+              <option value="3.8">80 × 80 cm</option>
+              <option value="3.5">90 × 90 cm (porcelanato)</option>
+            </select>
+          </div>
+          <div class="calc-field">
+            <label class="calc-field-checkbox">
+              <input type="checkbox" id="calc-double">
+              <span>Dupla camada (peças &gt; 30×30 cm)</span>
+            </label>
+          </div>
+        </div>
+        <div class="calc-result">
+          <div>
+            <div class="r-num mono" id="calc-sacos">9</div>
+            <div class="r-lbl">sacos de 20 kg</div>
+          </div>
+          <div>
+            <div class="r-num mono" id="calc-kg">180<span style="font-size:18px;margin-left:4px">kg</span></div>
+            <div class="r-lbl">total estimado</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Depoimentos ───────────────────────────────────────────── -->
+<section class="section" id="depoimentos" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow" style="margin-bottom:14px">[ 05 / depoimentos ]</div>
+        <h2 class="display-md">Quem usa,<br>recomenda.</h2>
+      </div>
+      <p class="lede">Construtores, engenheiros e revendedores que já trabalham com Argoeste no Oeste da Bahia.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Comprei 200 sacos da AC-II pra uma obra de 380 m² e sobrou material. Rendimento real é melhor que o do concorrente que eu usava antes."</blockquote>
+        <div class="who">
+          <div class="avatar">M</div>
+          <div class="who-info">
+            <b>Marcos Almeida</b>
+            <span>Mestre de obras · Barreiras</span>
+          </div>
+        </div>
+      </div>
+      <div class="testi">
+        <div class="stars">★★★★★</div>
+        <blockquote>"O suporte técnico me orientou na escolha pra fachada de porcelanato. AC-III aderiu perfeitamente e o pessoal entregou no dia combinado."</blockquote>
+        <div class="who">
+          <div class="avatar">J</div>
+          <div class="who-info">
+            <b>Juliana Reis</b>
+            <span>Engenheira civil · Luís Eduardo</span>
+          </div>
+        </div>
+      </div>
+      <div class="testi">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Revendo argamassa há 12 anos. A Argoeste tem qualidade de marca grande com preço competitivo. Cliente que comprou volta sempre."</blockquote>
+        <div class="who">
+          <div class="avatar">R</div>
+          <div class="who-info">
+            <b>Roberto Carvalho</b>
+            <span>Comerciante · Barreiras</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ───────────────────────────────────────────────────── -->
+<section class="section" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow" style="margin-bottom:14px">[ 06 / dúvidas ]</div>
+        <h2 class="display-md">Perguntas<br>frequentes.</h2>
+      </div>
+      <p class="lede">Não achou o que procurava? Manda a pergunta pelo WhatsApp — nosso técnico responde no mesmo dia.</p>
+    </div>
+    <div class="faq">
+      <div class="faq-item open">
+        <button class="faq-q">
+          <span>Qual argamassa eu uso pra porcelanato?</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Pra porcelanato em piso ou fachada use a AC-III. Ela é formulada com aditivos pra aderência em peças pouco porosas e suporta peças grandes, piso sobre piso e exposição externa.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          <span>Qual o rendimento por saco?</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Depende do tamanho da peça e do método. Numa peça de 40×40 cm em camada simples, fica em torno de 4,5 m² por saco de 20 kg. Acima de 30×30 cm o método correto é dupla camada — nesse caso o rendimento cai pela metade.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          <span>Vocês entregam fora de Barreiras?</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Sim. Atendemos cidades do Oeste da Bahia com logística própria. Pra outras regiões avaliamos caso a caso pelo WhatsApp.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          <span>Tem suporte técnico durante a obra?</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Tem. Antes da compra a gente ajuda a escolher o produto certo. Durante a obra, tira dúvidas de aplicação e dosagem pelo WhatsApp ou em visita técnica quando faz sentido.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          <span>Vendem pra revenda?</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Sim — somos fábrica. Atendemos lojas de material de construção do Oeste da Bahia com condição comercial específica. Fale com a gente pelo WhatsApp pra abrir cadastro.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          <span>As argamassas atendem qual norma?</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Nossas argamassas colantes atendem a NBR 14081 e os rejuntes a NBR 14992. A aplicação deve seguir a NBR 13753/13754/13755 conforme a peça e ambiente.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Contato ───────────────────────────────────────────────── -->
+<section class="section" id="contato" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow" style="margin-bottom:14px">[ 07 / contato ]</div>
+        <h2 class="display-md">Onde estamos.<br>Como falar<br>com a gente.</h2>
+      </div>
+      <p class="lede">Fábrica em Barreiras-BA. Atendimento por WhatsApp, telefone e visita presencial com agendamento.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Vamos conversar sobre sua obra.</h3>
+        <div class="contact-rows">
+          <div class="contact-row">
+            <div class="ico">✆</div>
+            <div>
+              <div class="lbl">Telefone · WhatsApp</div>
+              <a class="val" href="https://wa.me/5577999742551" target="_blank" rel="noopener">(77) 9 9974-2551</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="ico">@</div>
+            <div>
+              <div class="lbl">E-mail</div>
+              <a class="val" href="mailto:contato@argoeste.com.br">contato@argoeste.com.br</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="ico">⊙</div>
+            <div>
+              <div class="lbl">Endereço</div>
+              <div class="val">Rua Peru, 454 · Jardins<br>Barreiras, Bahia</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="ico">◔</div>
+            <div>
+              <div class="lbl">Horário</div>
+              <div class="val">Seg-Sex · 07h–17h<br>Sáb · 07h–12h</div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-btns">
+          <a class="btn btn-accent" href="https://wa.me/5577999742551" target="_blank" rel="noopener">
+            Conversar no WhatsApp →
+          </a>
+          <a class="btn btn-ghost" href="https://www.instagram.com/argoeste/" target="_blank" rel="noopener">
+            @argoeste
+          </a>
+        </div>
+      </div>
+      <div class="map-card">
+        <iframe
+          title="Localização Argoeste"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.5666913660552!2d-44.95065812482296!3d-12.141772143677182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x75ff5e0e80c4a35%3A0xddc18f20e9c44173!2sArgoeste%20Supermassa!5e0!3m2!1sen!2sbr!4v1742777425429!5m2!1sen!2sbr"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Instagram ─────────────────────────────────────────────── -->
+<section class="section" id="instagram" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow" style="margin-bottom:14px">[ 08 / @argoeste ]</div>
+        <h2 class="display-md">Acompanhe<br>nossas obras.</h2>
+      </div>
+      <a class="btn btn-ghost" href="https://www.instagram.com/argoeste/" target="_blank" rel="noopener" style="align-self:end;justify-self:end">
+        Seguir no Instagram →
+      </a>
+    </div>
+    <div class="ig-grid">
+      <a href="https://www.instagram.com/argoeste/" target="_blank" rel="noopener" class="ig-cell">
+        <img src="images/hero-image.png" alt="Post Argoeste">
+      </a>
+      <a href="https://www.instagram.com/argoeste/" target="_blank" rel="noopener" class="ig-cell">
+        <img src="images/argamassa-aci.png" alt="Post Argoeste">
+      </a>
+      <a href="https://www.instagram.com/argoeste/" target="_blank" rel="noopener" class="ig-cell">
+        <img src="images/image1.jpeg" alt="Post Argoeste">
+      </a>
+      <a href="https://www.instagram.com/argoeste/" target="_blank" rel="noopener" class="ig-cell">
+        <img src="images/argamassa-acii.png" alt="Post Argoeste">
+      </a>
+      <a href="https://www.instagram.com/argoeste/" target="_blank" rel="noopener" class="ig-cell">
+        <img src="images/rejuntepc.png" alt="Post Argoeste">
+      </a>
+      <a href="https://www.instagram.com/argoeste/" target="_blank" rel="noopener" class="ig-cell">
+        <img src="images/argamassa-aciii.png" alt="Post Argoeste">
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA Strip ─────────────────────────────────────────────── -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta-strip">
+      <h2>Pronto pra obra render mais?</h2>
+      <a class="btn btn-primary" href="https://wa.me/5577999742551" target="_blank" rel="noopener">
+        Falar no WhatsApp <span>→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ────────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="#top">
+          <div class="brand-mark">A</div>
+          <div class="brand-name">Argoeste</div>
+        </a>
+        <p class="footer-tag">Fábrica de argamassa do Oeste da Bahia. Qualidade, rendimento e suporte técnico em cada saco.</p>
+      </div>
+      <div>
+        <h4>Produtos</h4>
+        <ul>
+          <li><a href="#produtos">Argamassa AC-I</a></li>
+          <li><a href="#produtos">Argamassa AC-II</a></li>
+          <li><a href="#produtos">Argamassa AC-III</a></li>
+          <li><a href="#produtos">Rejunte Tipo I</a></li>
+          <li><a href="#produtos">Rejunte Porcelanato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#calculadora">Calculadora</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Fale com a gente</h4>
+        <ul>
+          <li><a href="https://wa.me/5577999742551" target="_blank" rel="noopener">WhatsApp: (77) 9 9974-2551</a></li>
+          <li><a href="mailto:contato@argoeste.com.br">contato@argoeste.com.br</a></li>
+          <li><a href="https://www.instagram.com/argoeste/" target="_blank" rel="noopener">@argoeste no Instagram</a></li>
+          <li>Rua Peru, 454 · Jardins<br>Barreiras, Bahia</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ARGOESTE INDÚSTRIA E COMÉRCIO LTDA · CNPJ disponível mediante solicitação</span>
+      <span>Feito no Oeste da Bahia · v2.0</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ── WhatsApp FAB ───────────────────────────────────────────── -->
+<a class="wa-fab" href="https://wa.me/5577999742551" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="white">
+    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/>
+  </svg>
+</a>
+
+<script src="script.js"></script>
+</body>
 </html>
